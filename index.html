@@ -1,0 +1,500 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta
+            name="description"
+            content="Documentation for the Benben API"
+        >
+    <title>笨笨机器人API文档</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all_nosearch-18c3ed8e.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;python&quot;,&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-9eb2eed1.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#45fa4e00db" class="toc-h1 toc-link" data-title="介绍">介绍</a>
+          </li>
+          <li>
+            <a href="#4a84be844e" class="toc-h1 toc-link" data-title="快速接入">快速接入</a>
+          </li>
+          <li>
+            <a href="#6812ba38bb" class="toc-h1 toc-link" data-title="功能支持">功能支持</a>
+          </li>
+          <li>
+            <a href="#c0c78a4290" class="toc-h1 toc-link" data-title="了解更多">了解更多</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#196b1605a4" class="toc-h2 toc-link" data-title="关于笨笨">关于笨笨</a>
+                  </li>
+                  <li>
+                    <a href="#ctp" class="toc-h2 toc-link" data-title="关于 CTP">关于 CTP</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#576374ba47" class="toc-h1 toc-link" data-title="免责声明">免责声明</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='http://221.207.166.58:8000/'>注册开发者秘钥</a></li>
+            <li><a href='https://github.com/slatedocs/slate'>Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='45fa4e00db'>介绍</h1><h1 id='4a84be844e'>快速接入</h1><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">"bot_id"</span><span class="p">:</span> <span class="s">"9c5a7e90-14bb-49da-819f-300cc4cef827"</span><span class="p">,</span>
+  <span class="s">"api_key"</span><span class="p">:</span> <span class="s">"e6bc4917-2ce6-440b-b8e3-0b49569ad069"</span><span class="p">,</span>
+  <span class="s">"user_id"</span><span class="p">:</span> <span class="s">"user-001"</span><span class="p">,</span>
+  <span class="s">"session_id"</span><span class="p">:</span> <span class="s">"session-007"</span><span class="p">,</span>
+  <span class="s">"message"</span><span class="p">:</span> <span class="s">"你好"</span><span class="p">,</span>
+  <span class="s">"msg_type"</span><span class="p">:</span> <span class="s">"text"</span>
+<span class="p">}</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s">"http://120.25.81.83:16999/ctp/chat/api"</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Accept: application/json"</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="nt">-X</span> POST <span class="se">\</span>
+    <span class="nt">-d</span> <span class="s2">"{</span><span class="se">\"</span><span class="s2">bot_id</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">9c5a7e90-14bb-49da-819f-300cc4cef827</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">api_key</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">e6bc4917-2ce6-440b-b8e3-0b49569ad069</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">user_id</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">user-001</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">session_id</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">session-007</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">message</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">你好</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">msg_type</span><span class="se">\"</span><span class="s2">: </span><span class="se">\"</span><span class="s2">text</span><span class="se">\"</span><span class="s2">}"</span> <span class="se">\</span>
+    http://120.25.81.83:16999/ctp/chat/api
+</code></pre></div>
+<blockquote>
+<p>上述命令返回的 JSON 数据格式如下</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"bot_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9c5a7e90-14bb-49da-819f-300cc4cef827"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user-001"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"session_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"session-007"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"msg_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"reply"</span><span class="p">:</span><span class="w"> </span><span class="s2">"你好，来个拥抱吧！"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>笨笨机器人相关接口支持 HTTP 请求</p>
+
+<p><strong>请求参数说明</strong></p>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bot_id</td>
+<td>机器人ID<br />提供公用机器人</td>
+<td><code>9c5a7e90-14bb-49da-819f-300cc4cef827</code></td>
+</tr>
+<tr>
+<td>api_key</td>
+<td>API 秘钥<br />提供公用秘钥</td>
+<td><code>e6bc4917-2ce6-440b-b8e3-0b49569ad069</code></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>当前聊天用户ID<br />根据情况初始化或者赋值</td>
+<td><code>user-001</code></td>
+</tr>
+<tr>
+<td>session_id</td>
+<td>当前聊天会话ID<br />根据情况初始化或者赋值</td>
+<td><code>session-007</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td>当前请求的消息</td>
+<td><code>你好</code></td>
+</tr>
+<tr>
+<td>msg_type</td>
+<td>当前消息类型<br />目前仅支持文本消息</td>
+<td><code>text</code></td>
+</tr>
+</tbody></table>
+
+<p><strong>返回参数说明</strong></p>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bot_id</td>
+<td>机器人ID</td>
+<td></td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>当前聊天用户ID</td>
+<td><code>user-001</code></td>
+</tr>
+<tr>
+<td>session_id</td>
+<td>当前聊天会话ID</td>
+<td><code>session-007</code></td>
+</tr>
+<tr>
+<td>msg_type</td>
+<td>消息类型</td>
+<td><code>text</code></td>
+</tr>
+<tr>
+<td>reply</td>
+<td>机器人返回的消息</td>
+<td><code>你好，来个拥抱吧！</code></td>
+</tr>
+</tbody></table>
+<h1 id='6812ba38bb'>功能支持</h1>
+<p>笨笨目前支持以下功能：</p>
+
+<table><thead>
+<tr>
+<th>名称</th>
+<th>功能说明</th>
+<th>对话实例</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>闲聊</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>成语接龙</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>聊小说</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id='c0c78a4290'>了解更多</h1><h2 id='196b1605a4'>关于笨笨</h2>
+<p>笨笨是由 <a href="http://ir.hit.edu.cn/">哈工大SCIR实验室</a> 的 <a href="http://ir.hit.edu.cn/1979.html">对话技术小组</a> 主导研发的一款面向普通用户的聊天机器人，具备开放域对话、知识问答、任务型对话以及对话式推荐等功能。2016年6月6日正式对外发布，搭载于微信公众号平台之上，截至2020年12月1日，关注人数达到6288。曾获“合创杯”第二届全国青年人工智能创新创业大会三等奖，中国人工智能学会最佳青年技术成果奖，相关研究成果发表在ACL 2017等会议。</p>
+<div class="highlight"><pre class="highlight tex tab-tex"><code>@inproceedings<span class="p">{</span>zhang2017benben,
+  title=<span class="p">{</span>Benben: A Chinese intelligent conversational robot<span class="p">}</span>,
+  author=<span class="p">{</span>Zhang, Weinan and Liu, Ting and Qin, Bing and Zhang, Yu and Che, Wanxiang and Zhao, Yanyan and Ding, Xiao<span class="p">}</span>,
+  booktitle=<span class="p">{</span>Proceedings of ACL 2017, System Demonstrations<span class="p">}</span>,
+  pages=<span class="p">{</span>13--18<span class="p">}</span>,
+  year=<span class="p">{</span>2017<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id='ctp'>关于 CTP</h2>
+<p>聊天机器人技术开放平台（Chatbot Technology Platform，CTP）测试版是基于笨笨机器人核心技术及框架开发，CTP测试版旨在开放我们已有的研究技术，希望能够最大化这些技术的利用价值，同时方便普通用户和开发者创建或者开发专属机器人。</p>
+
+<p>CTP 测试版支持机器人属性自定义、专属技能模块开发、多种交互使用形式以及会话日志分析等功能。同时，CTP测试版基本内置笨笨机器人各项技能，包括闲聊以及各种游戏技能模块，可供用户开箱即用（具体列表请访问<a href="http://221.207.166.58:8000/">CTP官网</a>查看）。</p>
+<h1 id='576374ba47'>免责声明</h1>
+<p>请勿直接用于商业组织，我们不对产生的任何后果负责。</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
