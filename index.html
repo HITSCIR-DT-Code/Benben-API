@@ -317,6 +317,14 @@
           </li>
           <li>
             <a href="#6812ba38bb" class="toc-h1 toc-link" data-title="功能支持">功能支持</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#ff05a8bac4" class="toc-h2 toc-link" data-title="已有功能">已有功能</a>
+                  </li>
+                  <li>
+                    <a href="#874a41b364" class="toc-h2 toc-link" data-title="使用方式">使用方式</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#c0c78a4290" class="toc-h1 toc-link" data-title="了解更多">了解更多</a>
@@ -329,9 +337,6 @@
                   </li>
               </ul>
           </li>
-          <li>
-            <a href="#576374ba47" class="toc-h1 toc-link" data-title="免责声明">免责声明</a>
-          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='http://221.207.166.58:8000/'>注册开发者秘钥</a></li>
@@ -341,7 +346,9 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='45fa4e00db'>介绍</h1><h1 id='4a84be844e'>快速接入</h1><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+        <h1 id='45fa4e00db'>介绍</h1>
+<p>笨笨聊天机器人 API 现已对外开放，欢迎使用！</p>
+<h1 id='4a84be844e'>快速接入</h1><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s">"bot_id"</span><span class="p">:</span> <span class="s">"9c5a7e90-14bb-49da-819f-300cc4cef827"</span><span class="p">,</span>
@@ -368,7 +375,7 @@
   </span><span class="nl">"reply"</span><span class="p">:</span><span class="w"> </span><span class="s2">"你好，来个拥抱吧！"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>笨笨机器人相关接口支持 HTTP 请求</p>
+<p>笨笨机器人相关接口支持 HTTP 请求。</p>
 
 <p><strong>请求参数说明</strong></p>
 
@@ -446,32 +453,87 @@
 <td><code>你好，来个拥抱吧！</code></td>
 </tr>
 </tbody></table>
-<h1 id='6812ba38bb'>功能支持</h1>
+<h1 id='6812ba38bb'>功能支持</h1><h2 id='ff05a8bac4'>已有功能</h2>
 <p>笨笨目前支持以下功能：</p>
 
 <table><thead>
 <tr>
-<th>名称</th>
-<th>功能说明</th>
-<th>对话实例</th>
+<th>功能名称</th>
+<th>功能描述</th>
+<th>模块触发</th>
+<th>是否上线</th>
+<th>线上状态</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>闲聊</td>
-<td></td>
-<td></td>
+<td>检索单轮模块</td>
+<td>“你是谁”<br />“你爸爸是谁”</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
 </tr>
 <tr>
-<td>成语接龙</td>
-<td></td>
-<td></td>
+<td>天气咨询</td>
+<td>多轮模块<br />根据用户咨询的地点、时间<br />调用接口查询天气并返回</td>
+<td>“哈尔滨今天天气怎么样”</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
+</tr>
+<tr>
+<td>主题对话</td>
+<td>足球相关问答</td>
+<td>默认触发<br />“你知道梅西吗？”</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
+</tr>
+<tr>
+<td>古文回复</td>
+<td>多轮模块<br />触发后锁定直至输入“退出”<br />对用户输入语句用文言文进行回复</td>
+<td>&quot;笨笨古文&quot;</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>聊小说</td>
-<td></td>
-<td></td>
+<td>多轮模块<br />触发后锁定直至输入“退出”<br />笨笨扮演金庸小说人物角色<br />对自己的属性关系进行回答</td>
+<td>“笨笨聊小说”</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
+</tr>
+<tr>
+<td>笨笨古诗</td>
+<td>多轮模块<br />可进行诗词成语等5个小游戏</td>
+<td>“笨笨古诗”</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
+</tr>
+<tr>
+<td>成语接龙</td>
+<td>多轮模块<br />可进行成语接龙游戏</td>
+<td>“成语接龙”</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
+</tr>
+<tr>
+<td>猜谜语</td>
+<td>多轮模块<br />可进行字谜灯谜等猜谜语游戏</td>
+<td>“猜谜语”<br />“来个字谜”</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
+</tr>
+<tr>
+<td>脑筋急转弯</td>
+<td>多轮模块</td>
+<td>“脑筋急转弯”</td>
+<td>:heavy_check_mark:</td>
+<td>:white_check_mark:</td>
 </tr>
 </tbody></table>
+<h2 id='874a41b364'>使用方式</h2>
+<ul>
+<li>直接调用公开闲聊机器人API，公开API现已内置所有笨笨功能，可参考“快速接入”部分使用。</li>
+<li>定制个人专属机器人，需要开发者登录 <a href="http://221.207.166.58:8000/">CTP平台</a> 注册，支持开发专属功能模块。</li>
+</ul>
 <h1 id='c0c78a4290'>了解更多</h1><h2 id='196b1605a4'>关于笨笨</h2>
 <p>笨笨是由 <a href="http://ir.hit.edu.cn/">哈工大SCIR实验室</a> 的 <a href="http://ir.hit.edu.cn/1979.html">对话技术小组</a> 主导研发的一款面向普通用户的聊天机器人，具备开放域对话、知识问答、任务型对话以及对话式推荐等功能。2016年6月6日正式对外发布，搭载于微信公众号平台之上，截至2020年12月1日，关注人数达到6288。曾获“合创杯”第二届全国青年人工智能创新创业大会三等奖，中国人工智能学会最佳青年技术成果奖，相关研究成果发表在ACL 2017等会议。</p>
 <div class="highlight"><pre class="highlight tex tab-tex"><code>@inproceedings<span class="p">{</span>zhang2017benben,
@@ -485,8 +547,6 @@
 <p>聊天机器人技术开放平台（Chatbot Technology Platform，CTP）测试版是基于笨笨机器人核心技术及框架开发，CTP测试版旨在开放我们已有的研究技术，希望能够最大化这些技术的利用价值，同时方便普通用户和开发者创建或者开发专属机器人。</p>
 
 <p>CTP 测试版支持机器人属性自定义、专属技能模块开发、多种交互使用形式以及会话日志分析等功能。同时，CTP测试版基本内置笨笨机器人各项技能，包括闲聊以及各种游戏技能模块，可供用户开箱即用（具体列表请访问<a href="http://221.207.166.58:8000/">CTP官网</a>查看）。</p>
-<h1 id='576374ba47'>免责声明</h1>
-<p>请勿直接用于商业组织，我们不对产生的任何后果负责。</p>
 
       </div>
       <div class="dark-box">
