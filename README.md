@@ -1,6 +1,6 @@
 # 笨笨 API 接口现已对外开放调用，欢迎体验~
 
-**摘要：**  笨笨 聊天机器人 API 接口 现已通过 CTP平台 对外开放，供开发者免费调用。接口目前支持 HTTP 调用，包括闲聊、咨询以及各种游戏技能，欢迎体验。如有任何使用问题或者建议可联系 [kyzhang@ir.hit.edu.cn](mailto:kyzhang@ir.hit.edu.cn) 。
+**摘要：**  笨笨 聊天机器人 API 接口 现已通过 CTP平台 对外开放，供开发者免费调用。接口目前支持 HTTP 调用，包括闲聊、天气咨询等各种聊天技能，欢迎体验。如有任何使用问题或者建议可联系 [kyzhang@ir.hit.edu.cn](mailto:kyzhang@ir.hit.edu.cn) 。
 
 更多使用说明可参考：https://hitscir-dt-code.github.io/Benben-API/
 
