@@ -322,7 +322,7 @@
                     <a href="#ff05a8bac4" class="toc-h2 toc-link" data-title="已有功能">已有功能</a>
                   </li>
                   <li>
-                    <a href="#874a41b364" class="toc-h2 toc-link" data-title="使用方式">使用方式</a>
+                    <a href="#fe23760db1" class="toc-h2 toc-link" data-title="自定义功能模块">自定义功能模块</a>
                   </li>
               </ul>
           </li>
@@ -347,7 +347,9 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='45fa4e00db'>介绍</h1>
-<p>笨笨聊天机器人 API 现已对外开放，欢迎使用！</p>
+<p>笨笨聊天机器人 API 现已对外开放，欢迎体验！</p>
+
+<p>如有任何使用问题可联系 <a href="mailto:kyzhang@ir.hit.edu.cn">kyzhang@ir.hit.edu.cn</a> 或在 <a href="https://github.com/HITSCIR-DT-Code/Benben-API/issues">HITSCIR-DT-Code/Benben-API</a> 反馈。</p>
 <h1 id='4a84be844e'>快速接入</h1><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -461,78 +463,58 @@
 <th>功能名称</th>
 <th>功能描述</th>
 <th>模块触发</th>
-<th>是否上线</th>
-<th>线上状态</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>闲聊</td>
 <td>检索单轮模块</td>
 <td>“你是谁”<br />“你爸爸是谁”</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>天气咨询</td>
 <td>多轮模块<br />根据用户咨询的地点、时间<br />调用接口查询天气并返回</td>
 <td>“哈尔滨今天天气怎么样”</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>主题对话</td>
 <td>足球相关问答</td>
 <td>默认触发<br />“你知道梅西吗？”</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>古文回复</td>
 <td>多轮模块<br />触发后锁定直至输入“退出”<br />对用户输入语句用文言文进行回复</td>
 <td>&quot;笨笨古文&quot;</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>聊小说</td>
 <td>多轮模块<br />触发后锁定直至输入“退出”<br />笨笨扮演金庸小说人物角色<br />对自己的属性关系进行回答</td>
 <td>“笨笨聊小说”</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>笨笨古诗</td>
 <td>多轮模块<br />可进行诗词成语等5个小游戏</td>
 <td>“笨笨古诗”</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>成语接龙</td>
 <td>多轮模块<br />可进行成语接龙游戏</td>
 <td>“成语接龙”</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>猜谜语</td>
 <td>多轮模块<br />可进行字谜灯谜等猜谜语游戏</td>
 <td>“猜谜语”<br />“来个字谜”</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 <tr>
 <td>脑筋急转弯</td>
 <td>多轮模块</td>
 <td>“脑筋急转弯”</td>
-<td>:heavy_check_mark:</td>
-<td>:white_check_mark:</td>
 </tr>
 </tbody></table>
-<h2 id='874a41b364'>使用方式</h2>
+<h2 id='fe23760db1'>自定义功能模块</h2>
 <ul>
-<li>直接调用公开闲聊机器人API，公开API现已内置所有笨笨功能，可参考“快速接入”部分使用。</li>
-<li>定制个人专属机器人，需要开发者登录 <a href="http://221.207.166.58:8000/">CTP平台</a> 注册，支持开发专属功能模块。</li>
+<li>开发者可以直接调用公开闲聊机器人API，公开API现已内置所有笨笨功能，可参考“快速接入”部分使用。</li>
+<li>开发者也可以定制个人专属机器人，登录 <a href="http://221.207.166.58:8000/">CTP平台</a> 注册，支持开发专属功能模块。</li>
 </ul>
 <h1 id='c0c78a4290'>了解更多</h1><h2 id='196b1605a4'>关于笨笨</h2>
 <p>笨笨是由 <a href="http://ir.hit.edu.cn/">哈工大SCIR实验室</a> 的 <a href="http://ir.hit.edu.cn/1979.html">对话技术小组</a> 主导研发的一款面向普通用户的聊天机器人，具备开放域对话、知识问答、任务型对话以及对话式推荐等功能。2016年6月6日正式对外发布，搭载于微信公众号平台之上，截至2020年12月1日，关注人数达到6288。曾获“合创杯”第二届全国青年人工智能创新创业大会三等奖，中国人工智能学会最佳青年技术成果奖，相关研究成果发表在ACL 2017等会议。</p>
